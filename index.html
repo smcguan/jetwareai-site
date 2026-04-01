@@ -214,7 +214,15 @@
 
     <div class="cta-label">Get in touch</div>
 
-    <a class="cta-btn" href="https://formspree.io/f/xlgolljk">Contact Us</a>
+    <form action="https://formspree.io/f/xlgolljk" method="POST" style="width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px;">
+  <input type="text" name="name" placeholder="Your name" required
+    style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,159,232,0.3);border-radius:8px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;">
+  <input type="email" name="email" placeholder="Your email" required
+    style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,159,232,0.3);border-radius:8px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;">
+  <textarea name="message" placeholder="Your message" rows="4" required
+    style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,159,232,0.3);border-radius:8px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;resize:vertical;"></textarea>
+  <button type="submit" class="cta-btn" style="margin-bottom:0;">Send Message</button>
+</form>
 
     <div class="contact-line">
       Or reach us directly at <a href="mailto:hello@jetwareai.com"><span class
