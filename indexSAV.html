@@ -29,23 +29,8 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5%; height: 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(12,21,39,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-w); }
     .nav-logo { text-decoration: none; }
     .logo-img { height: 42px; width: auto; display: block; }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-links a { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--light-gray); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-light); text-decoration: none; border: 1px solid var(--blue); padding: 7px 18px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    .nav-cta { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-light); text-decoration: none; border: 1px solid var(--blue); padding: 8px 20px; transition: background 0.2s, color 0.2s; }
     .nav-cta:hover { background: var(--blue); color: var(--white); }
-    /* Mobile nav */
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--light-gray); }
-    .nav-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: rgba(12,21,39,0.98); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-w); padding: 24px 5%; flex-direction: column; z-index: 99; }
-    .nav-menu.open { display: flex; }
-    .nav-menu a { font-size: 15px; font-weight: 400; color: var(--light-gray); text-decoration: none; padding: 14px 0; border-bottom: 1px solid var(--border-w); transition: color 0.2s; }
-    .nav-menu a:last-child { border-bottom: none; }
-    .nav-menu a:hover { color: var(--blue-light); }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
 
     /* HERO */
     .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px 5% 60px; position: relative; overflow: hidden; }
@@ -182,28 +167,8 @@
     <a href="#" class="nav-logo">
       <img src="assets/jetware-logo-blended.png" alt="JetWare AI" class="logo-img">
     </a>
-    <div class="nav-links">
-      <a href="#problem">The Problem</a>
-      <a href="#products">Our Products</a>
-      <a href="#engineering">Engineering</a>
-      <a href="#who-we-work-with">Who We Serve</a>
-      <a href="#who-are-we">Who We Are</a>
-      <a href="#contact" class="nav-cta">Tell Us About Your Data</a>
-    </div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
   </nav>
-
-  <!-- MOBILE DROPDOWN -->
-  <div class="nav-menu" id="navMenu">
-    <a href="#problem" onclick="closeMenu()">The Problem</a>
-    <a href="#products" onclick="closeMenu()">Our Products</a>
-    <a href="#engineering" onclick="closeMenu()">Engineering</a>
-    <a href="#who-we-work-with" onclick="closeMenu()">Who We Serve</a>
-    <a href="#who-are-we" onclick="closeMenu()">Who We Are</a>
-    <a href="#contact" onclick="closeMenu()">Tell Us About Your Data</a>
-  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -216,14 +181,14 @@
       </div>
       <p class="hero-desc">We build AI-powered analytics software for organizations that work with sensitive data. Local execution. Privacy by design. Purpose-built for the industries where data exposure isn't an option.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Tell Us About Your Data</a>
+        <a href="#contact" class="btn-primary">Request a Demo</a>
         <a href="#products" class="btn-secondary">Our Products</a>
       </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="alt-bg" id="problem">
+  <section class="alt-bg">
     <div class="section-inner">
       <div class="problem-grid">
         <div>
@@ -262,6 +227,52 @@
           <span class="product-badge badge-roadmap">Roadmap</span>
           <div class="product-name">Research Workbench</div>
           <p class="product-desc">External data sourcing for regulated industries. Fee schedules, CMS filings, regulatory databases — surfaced, normalized, and ready for analysis. Built for workflows that currently require manual data hunting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="alt-bg" id="privacy">
+    <div class="section-inner">
+      <div class="section-label">How Privacy Works</div>
+      <h2 class="section-title">The AI never sees your data.</h2>
+      <div class="privacy-grid">
+        <div>
+          <div class="privacy-principle">
+            <div class="privacy-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+              <div class="privacy-principle-title">Schema-only AI mode</div>
+              <div class="privacy-principle-body">The AI receives column names, data types, and aggregate statistics — nothing else. It generates analysis instructions that run locally. Your data rows never move.</div>
+            </div>
+          </div>
+          <div class="privacy-principle">
+            <div class="privacy-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div>
+              <div class="privacy-principle-title">Local execution</div>
+              <div class="privacy-principle-body">All queries run on your hardware via a high-performance local query engine. No external servers involved in data processing. Ever.</div>
+            </div>
+          </div>
+          <div class="privacy-principle">
+            <div class="privacy-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <div>
+              <div class="privacy-principle-title">Your API key, your agreement</div>
+              <div class="privacy-principle-body">Customers supply their own OpenAI API key. API usage falls under your own data agreement — not a vendor intermediary. No BAA required.</div>
+            </div>
+          </div>
+          <div class="privacy-principle">
+            <div class="privacy-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div>
+              <div class="privacy-principle-title">Full audit trail</div>
+              <div class="privacy-principle-body">Every query, every result, every decision is logged. Session logs provide a defensible methodology trail for regulated-environment compliance.</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="privacy-callout">
+            <div class="privacy-callout-text">"AI generates analysis instructions. Your data executes them — locally."</div>
+            <div class="privacy-callout-sub">For healthcare analysts: no BAA required. For consultants: client NDA compliance by design. For finance teams: MNPI stays where it belongs. For law firms: attorney-client privilege preserved.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -446,7 +457,7 @@
           <label for="interest">Area of Interest</label>
           <select id="interest" name="interest">
             <option value="" disabled selected>Select one</option>
-            <option>Analytics Workbench — Tell Us About Your Data</option>
+            <option>Analytics Workbench — Demo Request</option>
             <option>Document Workbench — Early Access</option>
             <option>Custom Engagement</option>
             <option>General Inquiry</option>
@@ -470,24 +481,4 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">&copy; 2026 JetWare AI LLC &mdash; San Clemente, CA</div>
-      <a href="mailto:hello@jetwareai.com" class="footer-email">hello@jetwareai.com</a>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('open');
-    }
-    function closeMenu() {
-      document.getElementById('navMenu').classList.remove('open');
-    }
-    document.addEventListener('click', function(e) {
-      const menu = document.getElementById('navMenu');
-      const hamburger = document.querySelector('.hamburger');
-      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-        menu.classList.remove('open');
-      }
-    });
-  </script>
-</body>
-</html>
+      <a href="/cdn-cgi/l/email-protection#5b333e3737341b313e2f2c3a293e3a3275383436" class="footer-email"><span class="__cf_emai
