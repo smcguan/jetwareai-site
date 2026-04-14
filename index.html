@@ -228,6 +228,7 @@
     @media (max-width: 900px) {
       .problem-grid, .privacy-grid, .who-grid { grid-template-columns: 1fr; gap: 48px; }
       .products-grid, .segments-grid, .cred-grid { grid-template-columns: 1fr; }
+      .accuracy-cols { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .who-statement { position: static; }
       .footer-inner { flex-direction: column; }
@@ -245,6 +246,7 @@
       <a href="#problem">The Problem</a>
       <a href="#products">Our Products</a>
       <a href="#engineering">Engineering</a>
+      <a href="#accuracy">Accuracy</a>
       <a href="#who-we-work-with">Who We Serve</a>
       <a href="#who-are-we">Who We Are</a>
       <a href="#contact" class="nav-cta">Tell Us About Your Data</a>
@@ -259,6 +261,7 @@
     <a href="#problem" onclick="closeMenu()">The Problem</a>
     <a href="#products" onclick="closeMenu()">Our Products</a>
     <a href="#engineering" onclick="closeMenu()">Engineering</a>
+    <a href="#accuracy" onclick="closeMenu()">Accuracy</a>
     <a href="#who-we-work-with" onclick="closeMenu()">Who We Serve</a>
     <a href="#who-are-we" onclick="closeMenu()">Who We Are</a>
     <a href="#contact" onclick="closeMenu()">Tell Us About Your Data</a>
@@ -340,8 +343,8 @@
               <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
             </svg>
           </div>
-          <div class="cred-title">1,100+ Automated Tests</div>
-          <div class="cred-body">Every build runs a full automated test suite — unit, integration, and end-to-end. Zero tolerance for regressions. Tests run in under 12 seconds. Every commit is verified before it ships.</div>
+          <div class="cred-title">2,151+ Automated Tests</div>
+          <div class="cred-body">Every build runs a full automated test suite — unit, integration, and end-to-end accuracy tests. Zero tolerance for regressions. Every commit is verified before it ships. AI accuracy audited against verified PE diligence baselines.</div>
         </div>
 
         <div class="cred-card">
@@ -395,6 +398,119 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ACCURACY CERTIFICATION -->
+  <section id="accuracy" class="alt-bg">
+    <div class="section-inner">
+      <div class="section-label">Accuracy Certification</div>
+      <h2 class="section-title">Every result is testable. Every release is audited.</h2>
+      <p class="section-body">Before every release, JetWare Workbench runs a full accuracy audit against verified PE diligence baselines. The results are published. You can run the audit yourself.</p>
+
+      <!-- Metric row -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:40px 0 48px;">
+        <div class="cred-card" style="text-align:center;padding:28px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:700;font-style:italic;color:#4ade80;line-height:1;margin-bottom:8px;">2,151</div>
+          <div class="cred-body" style="font-size:13px;">Automated tests passing</div>
+        </div>
+        <div class="cred-card" style="text-align:center;padding:28px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:700;font-style:italic;color:#4ade80;line-height:1;margin-bottom:8px;">100%</div>
+          <div class="cred-body" style="font-size:13px;">Structural accuracy tests</div>
+        </div>
+        <div class="cred-card" style="text-align:center;padding:28px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:700;font-style:italic;color:#4ade80;line-height:1;margin-bottom:8px;">Zero</div>
+          <div class="cred-body" style="font-size:13px;">Hallucinations detected</div>
+        </div>
+        <div class="cred-card" style="text-align:center;padding:28px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:700;font-style:italic;color:#4ade80;line-height:1;margin-bottom:8px;">0%</div>
+          <div class="cred-body" style="font-size:13px;">Privacy mode accuracy delta</div>
+        </div>
+      </div>
+
+      <!-- Two columns: findings + modes/download -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:48px;" class="accuracy-cols">
+
+        <!-- Findings -->
+        <div class="cred-card" style="padding:36px 32px;">
+          <div class="section-label" style="margin-bottom:20px;">What the audit confirms</div>
+          <div class="privacy-principle">
+            <div class="privacy-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="privacy-principle-title">Payer misclassification surfaces reliably</div>
+              <div class="privacy-principle-body">$10M in Medicaid MCO revenue misclassified as Commercial identified correctly in every test run — through natural language queries alone.</div>
+            </div>
+          </div>
+          <div class="privacy-principle">
+            <div class="privacy-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="privacy-principle-title">EBITDA gap confirmed without intervention</div>
+              <div class="privacy-principle-body">$2.2M gap between raw and CIM-stated adjusted EBITDA surfaces automatically — no manual reconciliation required.</div>
+            </div>
+          </div>
+          <div class="privacy-principle">
+            <div class="privacy-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="privacy-principle-title">Privacy Mode does not degrade accuracy</div>
+              <div class="privacy-principle-body">AI operating on schema and stats only — never raw data — produces zero accuracy delta vs. full-data mode.</div>
+            </div>
+          </div>
+          <div class="privacy-principle" style="margin-bottom:0;">
+            <div class="privacy-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="privacy-principle-title">Clean targets read clean</div>
+              <div class="privacy-principle-body">The system correctly distinguishes a discrepant deal from a clean one. No false positives on verified clean data.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modes + Download -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div class="cred-card" style="padding:32px;">
+            <div class="section-label" style="margin-bottom:16px;">Three AI modes tested</div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;align-items:flex-start;gap:14px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px;"></div>
+                <div><span style="font-size:14px;font-weight:500;color:var(--white);">Cloud Mode</span> <span style="font-size:13px;color:var(--gray);">— OpenAI GPT-4o-mini, schema-only prompts, API key encrypted at rest</span></div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:14px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:5px;"></div>
+                <div><span style="font-size:14px;font-weight:500;color:var(--white);">Local Mode</span> <span style="font-size:13px;color:var(--gray);">— Ollama on-machine, zero external calls, no API key required</span></div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:14px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:#F59E0B;flex-shrink:0;margin-top:5px;"></div>
+                <div><span style="font-size:14px;font-weight:500;color:var(--white);">Privacy Mode</span> <span style="font-size:13px;color:var(--gray);">— Raw data stripped from all prompts, AI sees schema and stats only</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cred-card" style="padding:36px 32px;text-align:center;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-top:2px solid var(--blue);">
+            <div class="section-label" style="margin-bottom:12px;">Q2 2026 Accuracy Certification</div>
+            <p class="cred-body" style="margin-bottom:24px;">Full methodology, test coverage, and results — updated each release. Available for technical review by IT and legal teams.</p>
+            <a href="assets/JetWare_AI_Accuracy_Certification_Q2_2026.pdf" download
+               style="display:inline-block;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--white);background:var(--blue);padding:12px 28px;transition:background 0.2s;">
+              Download PDF
+            </a>
+            <div style="font-size:11px;color:var(--gray);margin-top:12px;">v1.59 series &middot; April 2026</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom note -->
+      <div class="privacy-callout">
+        <div class="privacy-callout-text">"The accuracy audit runs before every release. The test infrastructure is open for review. You don't have to take our word for it."</div>
+        <div class="privacy-callout-sub">All test scenarios use fully synthetic data — no real patient, clinical, or proprietary deal information at any point. 2,151 automated tests passing as of v1.59 series, April 2026.</div>
+      </div>
+
     </div>
   </section>
 
